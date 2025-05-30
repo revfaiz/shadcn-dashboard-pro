@@ -3,20 +3,28 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "set PORT=3005 && next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "set PORT=3005 && next start",
     "lint": "eslint ."
   },
   "dependencies": {
+    "lucide-react": "^0.511.0",
     "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
+    "react": "^19.1.0",
+    "react-dom": "latest",
+    "react-dropzone": "^14.3.8",
+    "react-flatpickr": "^4.0.10"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "eslint": "latest",
+    "@types/node": "22.15.27",
+    "@types/react": "19.1.6",
+    "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
-    "@typescript-eslint/eslint-plugin": "latest"
+    "autoprefixer": "^10.4.21",
+    "eslint": "latest",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.8",
+    "typescript": "latest"
   }
 }

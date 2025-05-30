@@ -1,0 +1,117 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/styles/globals.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+.glitch {
+  position: relative;
+  color: #a21caf;
+  text-shadow:
+    0 0 5px #a21caf,
+    0 0 10px #f472b6,
+    2px 2px 2px #fff;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #f472b6;
+  z-index: 1;
+  opacity: 0.7;
+}
+.glitch::before {
+  animation: glitchTop 1s infinite linear alternate-reverse;
+  top: -2px;
+}
+.glitch::after {
+  animation: glitchBottom 1s infinite linear alternate-reverse;
+  top: 2px;
+}
+@keyframes glitchTop {
+  0% { left: 0; }
+  20% { left: 2px; }
+  40% { left: -2px; }
+  60% { left: 2px; }
+  80% { left: -1px; }
+  100% { left: 0; }
+}
+@keyframes glitchBottom {
+  0% { left: 0; }
+  20% { left: -2px; }
+  40% { left: 2px; }
+  60% { left: -2px; }
+  80% { left: 1px; }
+  100% { left: 0; }
+}
+
+.neon-glow {
+  box-shadow: 0 0 16px #a21caf, 0 0 32px #f472b6;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: transparent;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+th {
+  background: #1a003a;
+  color: #a21caf;
+  font-weight: 700;
+  border-bottom: 2px solid #a21caf;
+}
+
+td {
+  background: #232336;
+  color: #f472b6;
+  border-bottom: 1px solid #2e026d;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+section, .neon-glow {
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+section:hover, .neon-glow:hover {
+  box-shadow: 0 0 32px #f472b6, 0 0 64px #a21caf;
+  transform: scale(1.01);
+}
+
+.glitch-btn {
+  box-shadow: 0 0 8px #a21caf, 0 0 16px #f472b6;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.glitch-btn:hover {
+  box-shadow: 0 0 16px #f472b6, 0 0 32px #a21caf;
+  transform: scale(1.05) rotate(-1deg);
+}
+.animate-glitch {
+  animation: glitchBtn 1s infinite linear alternate-reverse;
+}
+@keyframes glitchBtn {
+  0% { opacity: 0.2; left: 0; }
+  20% { opacity: 0.4; left: 2px; }
+  40% { opacity: 0.3; left: -2px; }
+  60% { opacity: 0.5; left: 2px; }
+  80% { opacity: 0.4; left: -1px; }
+  100% { opacity: 0.2; left: 0; }
+}
